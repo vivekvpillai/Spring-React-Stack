@@ -1,23 +1,28 @@
 package com.example.demo;
 
-import com.example.demo.Greeting;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
+
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @SpringBootApplication
 @RestController
 public class DemoApplication {
+	@Autowired
+	private PersonRepository personRepository;
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
 	@GetMapping("/hello")
-	public Greeting hello() {
-		return new Greeting(1, "hi");
+	public String hello() {
+		Person n = new Person();
+	    n.setName("bob");
+	    n.setEmail("bob@bob.com");
+	    personRepository.save(n);
+	    return "Saved";
 	}
-
 }
