@@ -1,4 +1,4 @@
-package com.example.contacts;
+package com.generalassembly.contacts;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
