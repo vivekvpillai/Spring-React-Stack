@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -38,4 +39,12 @@ public class DemoApplication {
 		personRepository.deleteById(id);
 		return personRepository.findAll();
 	}
+
+	@PutMapping("/people/{id}")
+	public Iterable<Person> update(@PathVariable int id, @RequestBody Person personData) {
+		personData.setId(id);
+		personRepository.save(personData);
+		return personRepository.findAll();
+	}
+
 }
