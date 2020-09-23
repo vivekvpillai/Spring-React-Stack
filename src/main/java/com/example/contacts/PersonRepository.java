@@ -1,8 +1,8 @@
-package com.example.demo;
+package com.example.contacts;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.example.demo.Person;
+import com.example.contacts.Person;
 
 // This will be AUTO IMPLEMENTED by Spring into a Bean called userRepository
 // CRUD refers Create, Read, Update, Delete
