@@ -17,12 +17,8 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	@GetMapping("/hello")
-	public String hello() {
-		Person n = new Person();
-	    n.setName("bob");
-	    n.setEmail("bob@bob.com");
-	    personRepository.save(n);
-	    return "Saved";
+	@GetMapping("/people")
+	public Iterable<Person> index() {
+	    return personRepository.findAll();
 	}
 }
