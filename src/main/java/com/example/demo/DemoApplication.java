@@ -27,13 +27,13 @@ public class DemoApplication {
 		return personRepository.findAll();
 	}
 
-	@PostMapping(path="/people")
+	@PostMapping("/people")
 	public Iterable<Person> create (@RequestBody Person personData) {
 		personRepository.save(personData);
 		return personRepository.findAll();
 	}
 
-	@DeleteMapping(value = "/people/{id}")
+	@DeleteMapping("/people/{id}")
 	public Iterable<Person> delete(@PathVariable int id) {
 		personRepository.deleteById(id);
 		return personRepository.findAll();
