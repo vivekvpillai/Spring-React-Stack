@@ -16,6 +16,9 @@
 
 1. clone your fork of this repo onto your local computer somewhere outside the class repo
 1. `cd` into the local repo
+1. Run `java --version`.  Note, this may open a prompt you to install Java: click "More Info" and follow installation instructions.  Once complete, rerun the previous command
+  1. The first line that this command gives you is the version of Java and the date of its release (e.g. `java 15 2020-09-15` tells you it is Java version 15)
+  1. Make sure the number next to `java.runtime.version` in the system.properties file in your repo matches your version of Java.  If not, change that line of code.  Then git add/commit/push
 
 Set up an environment variable so your local spring app will use your local postgres database:
 
@@ -51,4 +54,4 @@ go to http://localhost:8080/ to view local app (note this uses your local postgr
 ### in your terminal
 
 1. run `git push heroku master`
-1. run `heroku open` to see app
+1. run `heroku open` to see app (note this uses your heroku postgres database, which will have different data than your local db)
