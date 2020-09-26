@@ -58,7 +58,7 @@ go to http://localhost:8080/ to view local app (note this uses your local postgr
 
 ## Rerunning local after initial set up
 
-1. Open PostgresApp and start the db
+Open Postgres app and start the db
 
 In terminal:
 
@@ -66,6 +66,4 @@ In terminal:
 1. Run `export JDBC_DATABASE_URL=jdbc:postgresql://localhost:5432/springdemo` again
 1. Run `./mvnw spring-boot:run`
 
-In Browser
-
-1. go to http://localhost:8080/
+In Browser go to http://localhost:8080/
