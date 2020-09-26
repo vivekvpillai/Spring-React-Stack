@@ -55,3 +55,17 @@ go to http://localhost:8080/ to view local app (note this uses your local postgr
 
 1. run `git push heroku master`
 1. run `heroku open` to see app (note this uses your heroku postgres database, which will have different data than your local db)
+
+## Rerunning local after initial set up
+
+1. Open PostgresApp and start the db
+
+In terminal:
+
+1. Go to repo root dir
+1. Run `export JDBC_DATABASE_URL=jdbc:postgresql://localhost:5432/springdemo` again
+1. Run `./mvnw spring-boot:run`
+
+In Browser
+
+1. go to http://localhost:8080/
