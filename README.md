@@ -2,7 +2,7 @@
 
 ## set up local
 
-## local postgres
+### local postgres
 
 1. open your postgres app and start the db server
 1. in the postgres app, double click one of the existing databases to enter `psql`
@@ -29,12 +29,15 @@ Now start spring:
 ./mvnw spring-boot:run
 ```
 
+### in your browser
+
+go to http://localhost:8080/ to view local app (note this uses your local postgres database)
+
 ## set up heroku
 
 ### in your terminal
 
 1. run `heroku create` (take note of the app name for later)
-1. run `git push heroku master`
 
 ### in your browser
 
@@ -45,3 +48,7 @@ Now start spring:
 1. choose "Hobby Dev - Free"
 1. click provision
 
+### in your terminal
+
+1. run `git push heroku master`
+1. run `heroku open` to see app
