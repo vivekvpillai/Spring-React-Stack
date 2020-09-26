@@ -6,7 +6,7 @@
 
 1. open your postgres app and start the db server
 1. in the postgres app, double click one of the existing databases to enter `psql`
-1. once inside `psql`, run `CREATE DATABASE springdemo;`
+1. once inside `psql`, run `CREATE DATABASE springreactapp;`
 
 ### in your browser
 
@@ -23,7 +23,7 @@
 Set up an environment variable so your local spring app will use your local postgres database:
 
 ```
-export JDBC_DATABASE_URL=jdbc:postgresql://localhost:5432/springdemo
+export JDBC_DATABASE_URL=jdbc:postgresql://localhost:5432/springreactapp
 ```
 
 Now start spring:
@@ -63,7 +63,7 @@ Open Postgres app and start the db
 In terminal:
 
 1. Go to repo root dir
-1. Run `export JDBC_DATABASE_URL=jdbc:postgresql://localhost:5432/springdemo` again
+1. Run `export JDBC_DATABASE_URL=jdbc:postgresql://localhost:5432/springreactapp` again
 1. Run `./mvnw spring-boot:run`
 
 In Browser go to http://localhost:8080/
